@@ -1,1 +1,20 @@
+# Mac trash
 *.DS_Store
+
+# RStudio Projects
+.Rproj.user
+*.Rproj
+
+# Latex trash
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
