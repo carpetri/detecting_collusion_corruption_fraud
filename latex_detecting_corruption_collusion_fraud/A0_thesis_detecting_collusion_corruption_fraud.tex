@@ -1,60 +1,50 @@
 \documentclass[11pt,letterpaper,english]{report}
 \usepackage{setspace}
 \setstretch{1.1}
-% \setstretch{1.1}
-
 \usepackage{bbm}
 \usepackage{geometry} 
 \geometry{letterpaper}
 \usepackage[english]{babel}
-
-% \usepackage[english,en-nodecimaldot]{babel}
-% \usepackage[papersize={170mm,225mm},bmargin=20mm,lmargin=25mm,rmargin=20mm]{geometry}  
+% \usepackage[papersize={170mm,225mm},bmargin=20mm,lmargin=25mm,rmargin=20mm]{geometry}  % Para tamaño ITAM
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
-
-
-%\pagestyle{myheadings}
 \usepackage{verbatim}  
 \usepackage{enumerate}
-
 \usepackage{subfig}
 \usepackage{fancyhdr} 
 \pagestyle{fancy} 
-%\usepackage{multicol}
-%\usepackage{rotating}
-% \usepackage{amsmath, amsthm, amssymb}
 \usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array}
-
 \usepackage{lscape}
-\usepackage{marvosym} % Allows the use of symbols
 \usepackage{float}
-% \usepackage{cite}
-% \usepackage{bibentry}
+\usepackage{hyperref}
+% \usepackage[colorlinks,citecolor={blue},urlcolor={blue}]{hyperref}
+\usepackage[labelsep=period,hypcap]{caption}
+% \usepackage{subcaption}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{url}
+\usepackage[]{titlesec}
+\usepackage[title,titletoc]{appendix}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Biblio super chingona %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%   carpetri@gmail.com  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{csquotes}
 \usepackage[backend=bibtex,uniquename=false,firstinits=false,
             bibstyle=authoryear,
-%            style=authoryear,
             citestyle=authoryear,
-            % citestyle=verbose,
             url=true,
             sorting=nyt]{biblatex}
 
-% \usepackage[authordate,backend=biber,bibencoding=utf8,bookpages=false,doi=only,isbn=false,footmarkoff]{biblatex-chicago}
-
-% \usepackage[colorlinks,citecolor={blue},urlcolor={blue}]{hyperref}
-
 \renewcommand*{\nameyeardelim}{\addcomma\addspace}
-
 \renewcommand*{\bibinitdelim}{}
-
 \renewbibmacro{in:}{} 
-
 \setlength\bibitemsep{1.5\itemsep}
 
-
-
-  
 \makeatletter
 
 \newrobustcmd*{\parentexttrack}[1]{%
@@ -64,57 +54,54 @@
   \blx@bibopenparen#1\blx@bibcloseparen
   \endgroup}
 
-\AtEveryCite{%
-  \let\parentext=\parentexttrack%
-  \let\bibopenparen=\bibopenbracket%
+\AtEveryCite{
+  \let\parentext=\parentexttrack
+  \let\bibopenparen=\bibopenbracket
   \let\bibcloseparen=\bibclosebracket
   }
 
 \AtEveryCitekey{\ifentrytype{misc}{\clearfield{labelyear}Web Page: }{}}
 
-\AtEveryBibitem{%
+\AtEveryBibitem{
   \ifentrytype{misc}{
-  \DeclareNameFormat{last-first}{%
+  \DeclareNameFormat{last-first}{
   \iffirstinits
     {\usebibmacro{name:last-first}{#1}{#4}{#5}{#7}}
-    {\usebibmacro{name:last-first}{#1}{#3}{#5}{#7}}%
+    {\usebibmacro{name:last-first}{#1}{#3}{#5}{#7}}
   \usebibmacro{name:andothers}}
   }{}
   }
 
-
-
 \makeatother
-
 \addbibresource{biblio}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\usepackage{hyperref}
-% \usepackage{caption}
-\usepackage[labelsep=period,hypcap]{caption}
-% \usepackage{subcaption}
-%\usepackage[framed,numbered]{mcode}
-\usepackage{lscape}
-\usepackage{longtable}
 % \addto\captionsspanish{\renewcommand{\figurename}{\it{Imagen}}}
 % \addto\captionsspanish{\renewcommand{\tablename}{\it{Tabla}}}
 % \addto\captionsspanish{\renewcommand\listfigurename{Índice de imágenes}}
 % \addto\captionsspanish{\renewcommand\listtablename{Índice de tablas}}
-%\addto\captionsspanish{\renewcommand{\captionfont}{\tt}}
+% \addto\captionsspanish{\renewcommand{\captionfont}{\tt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Encabezados %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%   carpetri@gmail.com  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\headrulewidth}{.5pt} 
 \renewcommand{\footrulewidth}{.0pt}
 \renewcommand{\chaptermark}[1]{\markright{#1}}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 \fancyhead[R]{\scshape ITAM}
-\fancyhead[L]{\scshape  \rightmark}
+\fancyhead[L]{\scshape \rightmark}
 
-
-
-\usepackage{longtable}
-\usepackage{xcolor}
-\usepackage{listings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Código %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%   carpetri@gmail.com  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lstset{
   basicstyle=\ttfamily,
   showstringspaces=false,
@@ -124,10 +111,13 @@
 \renewcommand\lstlistingname{\it{Código}}
 \renewcommand\lstlistlistingname{\it{Código}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{url}
-\usepackage[]{titlesec}
- 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Capítulos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%   carpetri@gmail.com  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\chapter} % command
 [display] % shape
 {\bfseries \LARGE} % format
@@ -138,37 +128,36 @@
 \vspace{-0.5ex}%
 \rule{\textwidth}{0.3pt}
 ] % after-code
-
-\usepackage[title,titletoc]{appendix}
-
-\title{Detecting Corruption Collusion and Fraud}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem*{cor}{Corollary}
-
 \theoremstyle{definition}
 \newtheorem{definition}{Definición}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{example}{Example}[section]
-
 \theoremstyle{remark}
 \newtheorem*{rem}{remark}
 \newtheorem*{note}{note}
 
+\title{Detecting Corruption Collusion and Fraud}
+\author{Carlos Petricioli}
+
 \begin{document}
 
-% Preliminaries
-\input{01_cover.tex}
-\input{02_web.tex}
-\input{03_abstract}
+% A. Preliminaries
+\input{A1_cover.tex}
+\input{A2_web.tex}
+\input{A3_abstract}
 
-% Chapters
-\input{11_introduction.tex}
+% B. Chapters
+\input{B1_introduction.tex}
+\input{B2_theoretical_background.tex}
 
-
+% C. 
 \appendix
 
 \titleformat{\chapter} % command
