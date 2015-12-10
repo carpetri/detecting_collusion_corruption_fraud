@@ -30,7 +30,7 @@ To approach the problem,  an interactive dashboard was developed for World Bank 
 Company names are represented by text strings in the data, and a single company may be represented in several very different ways (e.g. ACME Inc. vs. A.C.M.E. Co.)
 Company names were reconciled by querying each name on Google and comparing their top ten URL results. Names that had at least 7 links in common were considered to be a single company.
 
-## Co-award networks
+## Co-award networks
 A company that works with companies or on projects that have been investigated by the World Bank are more likely to be investigated themselves
 Companies that are on many projects together may know each other better and have the opportunity to collude
 
