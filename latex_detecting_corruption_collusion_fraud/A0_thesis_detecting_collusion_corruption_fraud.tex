@@ -20,12 +20,13 @@
 % \usepackage[colorlinks,citecolor={blue},urlcolor={blue}]{hyperref}
 \usepackage[labelsep=period,hypcap]{caption}
 % \usepackage{subcaption}
-\usepackage{lscape}
 \usepackage{longtable}
+\usepackage{multirow}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{url}
 \usepackage[]{titlesec}
+\usepackage[export]{adjustbox}
 \usepackage[title,titletoc]{appendix}
 
 
@@ -60,7 +61,7 @@
   \let\bibcloseparen=\bibclosebracket
   }
 
-\AtEveryCitekey{\ifentrytype{misc}{\clearfield{labelyear}Web Page: }{}}
+\AtEveryCitekey{\ifentrytype{misc}{\clearfield{labelyear}Web page: }{}}
 
 \AtEveryBibitem{
   \ifentrytype{misc}{
@@ -170,6 +171,11 @@
 \vspace{-0.5ex}%
 \rule{\textwidth}{0.3pt}
 ] % after-code
+
+
+\input{X1_procurement_plan.tex}
+
+
 
 
 % \bibliography{biblio.bib}
