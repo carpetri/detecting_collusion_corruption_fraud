@@ -1,6 +1,6 @@
 \documentclass[11pt,letterpaper,english]{report}
 \usepackage{setspace}
-\setstretch{1.1}
+\setstretch{1.3}
 \usepackage{bbm}
 \usepackage{geometry} 
 \geometry{letterpaper}
@@ -10,7 +10,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{verbatim}  
 \usepackage{enumerate}
-\usepackage{subfig}
 \usepackage{fancyhdr} 
 \pagestyle{fancy} 
 \usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array}
@@ -19,7 +18,7 @@
 \usepackage{hyperref}
 % \usepackage[colorlinks,citecolor={blue},urlcolor={blue}]{hyperref}
 \usepackage[labelsep=period,hypcap]{caption}
-% \usepackage{subcaption}
+\usepackage{subcaption} % \usepackage{subfig}
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{xcolor}
@@ -28,7 +27,6 @@
 \usepackage[]{titlesec}
 \usepackage[export]{adjustbox}
 \usepackage[title,titletoc]{appendix}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% Biblio super chingona %%%%%%%%%%%%%%%%%%%%
@@ -61,7 +59,7 @@
   \let\bibcloseparen=\bibclosebracket
   }
 
-\AtEveryCitekey{\ifentrytype{misc}{\clearfield{labelyear}Web page: }{}}
+\AtEveryCitekey{\ifentrytype{misc}{\clearfield{labelyear}web page }{}}
 
 \AtEveryBibitem{
   \ifentrytype{misc}{
@@ -137,9 +135,9 @@
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem*{cor}{Corollary}
 \theoremstyle{definition}
-\newtheorem{definition}{Definición}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+% \newtheorem{conjecture}{Conjecture}[section]
+% \newtheorem{example}{Example}[section]
 \theoremstyle{remark}
 \newtheorem*{rem}{remark}
 \newtheorem*{note}{note}
@@ -161,6 +159,7 @@
 % C. 
 \appendix
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\chapter} % command
 [display] % shape
 {\bfseries \LARGE} % format
@@ -171,14 +170,14 @@
 \vspace{-0.5ex}%
 \rule{\textwidth}{0.3pt}
 ] % after-code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \input{X1_procurement_plan.tex}
 
+\input{X1_software.tex}
 
 
-
-% \bibliography{biblio.bib}
 \printbibheading[heading=bibintoc]
 \printbibliography[type=book,heading=subbibintoc,title={Books}]
 \printbibliography[type=article,heading=subbibintoc,title={Articles}]
