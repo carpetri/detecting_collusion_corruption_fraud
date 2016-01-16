@@ -1,0 +1,21 @@
+% !TEX root = A0_thesis_detecting_collusion_corruption_fraud.tex
+\chapter{The World Bank's Data}\label{chap_data}
+
+As chapter \ref{chap_intro} says, collecting the necessary data for a Data Science project is almost always a huge task because the reality tends to be that some relevant variables commonly go unmeasured or are private. For this project a confidentiality agreement was signed in order to have access to private data. The only condition was that all the data and analyses had to be stored and processed on a remote server with an encryption and security measurements that satisfied the World Bank's standards. The Integrity Vice Presidency (INT) and the partners made the data available for the project while maintaining a spirit of openness.
+
+Fortunately for the project, not all the data was private. This work uses the Open Data\footnote{Go to \cite{wb_data}}  and the Data Bank websites from the World Bank, which offer free access to comprehensive, downloadable indicators about development in countries around the globe. A good practice in Data Science is to generate code so that all results can be easily replicated. That was the reason why, for this project all the data that the World Bank bank provides publicly by an Application Programming Interface (API) was collected with reliable code. 
+
+Thanks to prior World Bank's work, accessing the World Bank Data APIs with code in languages such as \texttt{Python}, \texttt{R}, \texttt{Ruby} and \texttt{Stata} is a simple task. The World Bank has a blog where they explain in detail how to use the APIs.See the \cite{wb_api}, \cite{wb_python} and \cite{wb_r} for more details on how to do this. To put things in context, \texttt{Python} and \texttt{Ruby} are general-purpose programming languages, and \texttt{Stata} and \texttt{R} are programming environments optimized for statistics. They're all widely used in the business and academic worlds. The World Bank generates modules to those languages which help users to connect to the World Bank Development Indicators API and access the latest data.
+
+For example, in \texttt{python}, the \texttt{wbdata} module by Oliver Sherouse offers easy access to all the data in the World Bank's APIs. It also plays nicely with Wes McKinney’s  \texttt{pandas} analysis library\footnote{See appendix \ref{chap_software} for \texttt{pandas} details.}. \texttt{Wbdata} is a simple python interface to find and request information from the World Bank's various databases, either as a dictionary containing full meta data or as a \texttt{pandas} Data Frame. Currently, \texttt{wbdata} wraps most of the World Bank API, and also adds some convenience functions for searching and retrieving information.
+
+In \texttt{R}, the \texttt{WDI} module by Vincent Arel-Bundock offers convenient access to the data in the World Bank's API. For fast searching, the \texttt{WDI} package ships with a local list of available data series. This local list can be updated to the latest version using the \texttt{WDIcache} function \parencite{wb_r}. Similar tools are available to languages such as Ruby and Stata.
+
+
+
+
+
+
+
+
+

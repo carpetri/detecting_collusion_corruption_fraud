@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper,english]{report}
+\documentclass[12pt,letterpaper,english]{report}
 \usepackage{setspace}
 \setstretch{1.3}
 \usepackage{bbm}
@@ -72,8 +72,7 @@
   }
 
 \makeatother
-\addbibresource{biblio}
-
+\addbibresource{biblio.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -120,12 +119,12 @@
 \titleformat{\chapter} % command
 [display] % shape
 {\bfseries \LARGE} % format
-{\rule{\textwidth}{0.3pt} Chapter \ \thechapter.} % label
+{\rule{\textwidth}{0.9pt} Chapter \ \thechapter.} % label
 {0.0ex} % sep
 {   \centering } 
 [
 \vspace{-0.5ex}%
-\rule{\textwidth}{0.3pt}
+\rule{\textwidth}{0.9pt}
 ] % after-code
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -145,17 +144,26 @@
 \title{Detecting Corruption Collusion and Fraud}
 \author{Carlos Petricioli}
 
+
+
+
+
+
+
 \begin{document}
+
 
 % A. Preliminaries
 \input{A1_cover.tex}
-\input{A2_web.tex}
-\input{A3_abstract}
 
+\input{A3_abstract}
+\input{A2_web.tex}
 % B. Chapters
 \input{B1_introduction.tex}
-\input{B2_theoretical_background.tex}
 
+\input{B2_procurements.tex}
+% \input{B3_theoretical_background.tex}
+\input{B3_data.tex}
 % C. 
 \appendix
 
@@ -163,11 +171,11 @@
 \titleformat{\chapter} % command
 [display] % shape
 {\bfseries \LARGE} % format
-{\rule{\textwidth}{0.3pt} Appendix \ \thechapter.} % label
+{\rule{\textwidth}{0.9pt} Appendix \ \thechapter.} % label
 {0.0ex} % sep
 {   \centering } 
 [
-\vspace{-0.5ex}%
+\vspace{-0.9ex}%
 \rule{\textwidth}{0.3pt}
 ] % after-code
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
