@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Detecting corruption, collusion & fraud - Interactive map</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 
-<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.13/d3.min.js"></script>
+<script charset="utf-8" src="https://d3js.org/d3.v3.min.js"></script>
 <script charset="utf-8" src="progressbar.js"></script>
 <script charset="utf-8" src="tooltip.js"></script>
 <script charset="utf-8" src="wbc.js"></script>
@@ -180,7 +180,7 @@
 
     #info li {
         border: 0;
-        border-right: 1px dotted rgba(115, 142, 171, 1);
+        border-right: 1px dotted grey;
         padding-right: 5px;
         cursor: pointer;
     }
@@ -243,7 +243,7 @@
                     <label for="chLeg">Show legend</label>
                 </li>
                 <li style="background: rgba(0, 0, 0); color:black; border: 10px solid rgba(20, 20, 20)">
-                    <input id="chEdge" type="checkbox" checked="checked">
+                    <input id="chEdge" type="checkbox">
                     <label for="chEdge">Show all edges</label>
                 </li>
                 <li style="background: rgba(0, 0, 0); color:black; border: 10px solid rgba(20, 20, 20)">
@@ -384,8 +384,8 @@ var shortTimeFormat = (function() {
     }
 })();
 
-var ONE_SECOND = 250,
-    stepDate = 24 * 60 * 60 * 250
+var ONE_SECOND = 2000,
+    stepDate = 24 * 60 * 60 * 1000
 ;
 
 (function(vis) {
