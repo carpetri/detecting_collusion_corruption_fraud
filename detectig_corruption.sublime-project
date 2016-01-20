@@ -10,7 +10,6 @@
 				"*.fdb_latexmk",
 				"*.lof",
 				"*.log",
-				"*.pdf",
 				"*.lot",
 				"*.out",
 				"*.run.xml",
