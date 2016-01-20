@@ -8,7 +8,7 @@
 <body>
 
 <script charset="utf-8" src="https://d3js.org/d3.v3.min.js"></script>
-<script charset="utf-8" src="progressbar.js"></script>
+<script charset="utf-8" src="progressbar.js"></script> 
 <script charset="utf-8" src="tooltip.js"></script>
 <script charset="utf-8" src="wbc.js"></script>
 
@@ -284,7 +284,7 @@
                 </li>
                 <li style="background: rgba(0, 0, 0); color:black; border: 1px solid rgba(20, 20, 20)">
                     <small>Created by <a href="http://carlospetricioli.com" title="Carlos Petricioi">Carlos Petricioli</a> <br/>
-                    Powered by <a href="http://d3js.org" title="D3js">D3.js</a>. Icons flags - <a href="http://forum.tsgk.com/viewtopic.php?t=4921">Country Code & Territories Flags Pack Icons</a>. Based on <a href="http://artzub.com">Artzub's</a> work.<br/>
+                    Powered by <a href="http://d3js.org" title="D3js">D3.js</a>. Based on <a href="http://artzub.com">Artzub's</a> work.<br/>
                     See details of the project: 
                         <a href="http://detecting-corruption.carlospetricioli.com">Detecting corruption, collusion & fraud.</a></small>
                 </li>
@@ -380,7 +380,7 @@ var asyncForEach = function(items, fn, time) {
 var shortTimeFormat = (function() {
     var fd = d3.time.format("%d.%b.%y");
     return function(ms) {
-        return fd(new Date(ms/* - TIME_ZONE*/));
+        return fd(new Date(ms));
     }
 })();
 
