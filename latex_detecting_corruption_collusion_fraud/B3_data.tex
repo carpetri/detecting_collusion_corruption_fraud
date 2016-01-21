@@ -10,7 +10,7 @@ The most valuable data for this project was the private data which the partners 
 In this case the server was an Amazon Web Service's (AWS), Amazon Elastic Compute Cloud (Amazon EC2) machine. EC2 is a web service that provides resizable compute capacity in the cloud. It is designed to make web scale cloud computing easier for developers\footnote{``Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change. Amazon EC2 changes the economics of computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools to build failure resilient applications and isolate themselves from common failure scenarios.'' \parencite{aws_es2}}. For more details on how to setup an AWS computer see \parencite{aws_start} and appendix \ref{chap_software}. In other words, the data was stored in an AWS machine on the cloud that had an encrypted folder with the specific files. Since all the data had to stay on the cloud, all the processing had to be done on the cloud too. For this purpose, 
 
 
-
+Disambiguation
 
 \section{Public data}\label{sec_public_data}
 
@@ -22,11 +22,27 @@ For example, in \texttt{python}, the \texttt{wbdata} module by Oliver Sherouse o
 
 In \texttt{R}, the \texttt{WDI} module by Vincent Arel-Bundock offers convenient access to the data in the World Bank's API. For fast searching, the \texttt{WDI} package ships with a local list of available data series. This local list can be updated to the latest version using the \texttt{WDIcache} function \parencite{wb_r}. Similar tools are available to languages such as Ruby and Stata.
 
+\subsection{World Development Indicators}
 
+The World Bank has a major data base called: World Development Indicators (WDI). WDI is the primary World Bank collection of development indicators, compiled from officially recognized international sources. This database represents the most current and accurate global development data available, and includes national, regional and global estimates.
 
+Being this big, and according to purpose of this project, only a few indicators were selected. The next list shows the ones that were considered. This list includes indicators related to 
 
-
-
+\begin{enumerate}[1.]
+\item \texttt{IC.BUS.DISC.XQ}	Private Sector \& Trade: Business environment. Business extent of disclosure index (0=less disclosure to 10=more disclosure)	Disclosure index measures the extent to which investors are protected through disclosure of ownership and financial information. The index ranges from 0 to 10, with higher values indicating more disclosure.
+\item \texttt{IC.FRM.CMPU.ZS}	Private Sector \& Trade: Business environment. Firms competing against unregistered firms (\% of firms).
+\item \texttt{IC.FRM.CORR.ZS}	Private Sector \& Trade: Business environment	Informal payments to public officials (\% of firms).
+\item \texttt{IC.FRM.INFM.ZS}	Private Sector \& Trade: Business environment	Firms that do not report all sales for tax purposes (\% of firms).
+\item \texttt{IC.LGL.CRED.XQ}	Private Sector \& Trade: Business environment	Strength of legal rights index (0=weak to 10=strong).
+\item \texttt{IC.LGL.DURS}	Private Sector \& Trade: Business environment	Time required to enforce a contract (days).
+\item \texttt{IC.TAX.GIFT.ZS}	Private Sector \& Trade: Business environment	Firms expected to give gifts in meetings with tax officials (\% of firms).
+\item \texttt{IQ.CPA.PROP.XQ}	Public Sector: Policy \& institutions	CPIA property rights and rule-based governance rating (1=low to 6=high).
+\item \texttt{IQ.CPA.TRAN.XQ}	Public Sector: Policy \& institutions	CPIA transparency, accountability, and corruption in the public sector rating (1=low to 6=high).
+\item \texttt{NY.GDP.PCAP.CD}	Economic Policy \& Debt: National accounts: USD at current prices: Aggregate indicators	GDP per capita (current US\$).
+\item \texttt{SE.PRM.PRSL.ZS}	Education: Efficiency	Persistence to last grade of primary, total (\% of cohort).
+\item \texttt{SI.POV.GINI}	Poverty: Income distribution GINI index.
+\item \texttt{SL.UEM.TOTL.NE.ZS}	Social Protection \& Labor: Unemployment	Unemployment, total (\% of total labor force) (national estimate).
+\end{enumerate}
 
 
 
