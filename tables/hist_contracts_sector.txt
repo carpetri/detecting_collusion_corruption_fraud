@@ -1,0 +1,33 @@
+% latex table generated in R 3.2.3 by xtable 1.8-0 package
+% Sun Jan 17 09:58:37 2016
+\begin{table}[H]
+\centering
+\caption{Hitorical contracts per sector} 
+\label{tab_hist_cont}
+\begin{tabular}{lr}
+  \hline
+major\_sector\_clean & Freq \\ 
+  \hline
+law/justice/public administration & 89330 \\ 
+  transportation & 72084 \\ 
+  education & 60644 \\ 
+  health/social services & 46365 \\ 
+  water/sanitation/flood protection & 33265 \\ 
+  agriculture/fishing/forestry & 29081 \\ 
+  energy/mining & 21771 \\ 
+  finance & 17132 \\ 
+  industry/trade & 12305 \\ 
+  information/communication & 4290 \\ 
+  environment & 61 \\ 
+  social protection & 49 \\ 
+  multisector & 37 \\ 
+  electric power/other energy & 33 \\ 
+  private sector development & 27 \\ 
+  urban development & 18 \\ 
+  economic policy & 13 \\ 
+  health/nutrition/population & 7 \\ 
+  industry/trade & 3 \\ 
+  oil/gas & 1 \\ 
+   \hline
+\end{tabular}
+\end{table}
