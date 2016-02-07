@@ -24,10 +24,10 @@ ssh -i /path/my-key-pair.pem \
 ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com
 \end{lstlisting}
 
-To transfer a file to your instance using the instance's public DNS name. For example, if the name of the private key file is my-key-pair, the file to transfer is	\texttt{SampleFile.txt}, and the public DNS name of the instance is \begin{lstlisting}
+To transfer a file to your instance using the instance's public DNS name. For example, if the name of the private key file is my-key-pair, the file to transfer is	\texttt{SampleFile.txt}, and the public DNS name of the instance is \begin{lstlisting}[language=bash]
 ec2-198-51-100-1.compute-1.amazonaws.com
 \end{lstlisting} use the following command to copy the file to the \texttt{ec2-user} home directory.
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 scp -i /path/my-key-pair.pem SampleFile.txt \
 ec2-user@ec2-198-51-100-1.compute-1.amazonaws
 \end{lstlisting}
