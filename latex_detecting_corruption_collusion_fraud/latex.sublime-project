@@ -1,0 +1,28 @@
+{
+	"folders":
+		[
+			{
+				"file_exclude_patterns":
+				[
+					"*.aux",
+					"*.bbl",
+					"*.blg",
+					"*.fdb_latexmk",
+					"*.lof",
+					"*.log",
+					"*.lot",
+					"*.out",
+					"*.run.xml",
+					"*.synctex.gz",
+					"*.toc",
+					"*-blx.bib",
+					"*.fls"
+				],
+				"path": "/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud"
+			}
+		],
+		"settings":
+				{
+					"TEXroot": "A0_thesis_detecting_collusion_corruption_fraud.tex"
+				}
+}
