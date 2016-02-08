@@ -4,6 +4,7 @@
 # RStudio Projects
 .Rproj.user
 *.Rproj
+*.Rhistory
 
 # Latex trash
 latex_detecting_corruption_collusion_fraud/00_thesis_detecting_collusion_corruption_fraud-blx.bib
