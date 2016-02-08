@@ -32,7 +32,7 @@ There are among 1000 different sectors but most of them are mixed sectors and ha
 
 
 
-Disambiguation
+
 
 \section{Public data}\label{sec_public_data}
 
@@ -41,7 +41,6 @@ Fortunately for the project, not all the data was private. This work uses the Op
 
 Public data from the World bank comes from different databases. They are generated at different sections within the World Bank so each indicator can be obtained form a specific database according to its nature. For example, all the Development indicators can be obtained at the World Bank's World Development Indicators database, indicators regarding how easy it ts to do business in each specific country could be obtained from the Doing Business database and indications regarding world's populations can be obtained at the Health Nutrition and Population Statistics database.\footnote{Different databases include:
 Africa Development Indicators, Statistical Capacity Indicators, Country Policy and Institutional Assessment (CPIA), Country Partnership Strategy for India, Corporate Scorecard, Doing Business, Exporter Dynamics Database: Country-Year, Education Statistics, Enterprise Surveys, Global Findex ( Global Financial Inclusion database), G20 Basic Set of Financial Inclusion Indicators, Gender Statistics, Global Economic Monitor, GEP Economic Prospects, Global Financial Development, Global Economic Monitor (GEM) Commodities, Global Partnership for Education, Global Social Protection, Health Nutrition and Population Statistics, Health Nutrition and Population Statistics by Wealth Quintile, Health Nutrition and Population Statistics: Population estimates and projections, International Development Association - Results Measurement System, INDO-DAPOER, International Debt Statistics, Jobs for Knowledge Platform, LAC Equity Lab, Millennium Development Goals, Povstats, Quarterly Public Sector Debt, Quarterly External Debt Statistics/GDDS (New), Quarterly External Debt Statistics/SDDS (New), Readiness for Investment in Sustainable Energy (RISE), Sustainable Energy for All, Subnational Malnutrition Database, Subnational Poverty, Subnational Population, Wealth accounting, World Development Indicators and the  Worldwide Governance Indicators.}
-
 
 A good practice in Data Science is to generate code so that all results can be easily replicated. That was the reason why, for this project all the data that the World Bank bank provides publicly by an Application Programming Interface (API) was collected with reliable code. Thanks to prior World Bank's work, accessing the World Bank Data APIs with code in languages such as \texttt{Python}, \texttt{R}, \texttt{Ruby} and \texttt{Stata} is a simple task. The World Bank has a blog where they explain in detail how to use the APIs. See the \cite{wb_api}, the \cite{wb_python} and the \cite{wb_r} for more details on how to do this. To put things in context, \texttt{Python} and \texttt{Ruby} are general-purpose programming languages, and \texttt{Stata} and \texttt{R} are programming environments optimized for statistics. They're all widely used in the business and academic worlds. The World Bank generates modules to those languages which help users to connect to the World Bank Development Indicators API and access the latest data.
 
@@ -76,7 +75,48 @@ Also, the World Bank has around 16,000 different indicators the project could us
 
 The code to download WDI can be seen at the Appendix \ref{chap_code} in code \ref{code_wdi}. This code can easily replicate results. For the purpose of this work, the code in \ref{code_wdi} downloads data for the countries within the countries from the investigations data, those countries define the countries list for this work.
 
+
+
+\begin{figure}[H]
+\begin{center}
+\caption{WDI: \% of Bribes to tax officials per Country/Region}
+\label{fig_wdi_bribes}
+\includegraphics[max height=.9\textheight]{../img/wdi_bribes_to_tax_officials_perc.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation and data obtained with package \texttt{WDI}, see the \cite{wb_r}.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\caption{WDI: \% of Firms competing against informal firms per country/Region}
+\label{fig_wdi_firms}
+\includegraphics[max height=.9\textheight]{../img/wdi_firms_competing_against_informal_firms_perc.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation and data obtained with package \texttt{WDI}, see the \cite{wb_r}.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\caption{WDI: \% of Payments to public officials per Country/Region}
+\label{fig_wdi_pays}
+\includegraphics[max height=.9\textheight]{../img/wdi_payments_to_public_officials_perc.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation and data obtained with package \texttt{WDI}, see the \cite{wb_r}.}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\caption{WDI: Time to Enforce Contracts per Country/Region}
+\label{fig_wdi_time_contract}
+\includegraphics[max height=.9\textheight]{../img/wdi_time_to_enforce_contract.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation and data obtained with package \texttt{WDI}, see the \cite{wb_r}.}
+\end{figure}
+
+
 \subsection{Major and Historic Awards}
 
 
 
+\section{Disambiguation}
