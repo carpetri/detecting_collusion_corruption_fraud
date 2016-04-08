@@ -96,6 +96,12 @@ For this project, we met with the World Bank team in charge of attacking this pr
 <p> This project incorporated data from multiple sources including historical data on over 300,000 major contracts funded by World Bank loans from the past 20 years, which had features as company name, country, sector, and total award amount. We needed to add some additional features to the data in order to classify in a more accurate way each contract, so we incorporated  annual economic development indicators, collected by the World Bank, for countries and industries within them. Finally, the World Bank gave us investigations data, covering companies and projects investigated for collusion, corruption or fraud in the past years that includes specific allegations and case outcomes.
 </p>
 
+<div>
+    <a href="https://plot.ly/~carpetri/2/" target="_blank" title="(AFR,AFR), (EAP,EAP), (ECA,ECA), (LCR,LCR), (MNA,MNA), (OTH,OTH), (SAR,SAR)" style="display: block; text-align: center;"><img src="https://plot.ly/~carpetri/2.png" alt="(AFR,AFR), (EAP,EAP), (ECA,ECA), (LCR,LCR), (MNA,MNA), (OTH,OTH), (SAR,SAR)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="carpetri:2"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+
 <p> The first big problem that the project faced after cleaning all the data was that company names are represented by different text strings among different data sources, so a single company may be represented in several very different ways (e.g. ACME Inc. vs. A.C.M.E. Co.). This was a big problem because, in order for the project to develop a model that predicts the level of risk for a contract presenting corruption or fraudulent activities, we need to have common strings among the data corresponding to the entities. 
 
 What we did, was a company name disambiguation. Company names were reconciled by querying each name on Google and comparing their top 10 URL results. Names that had at least 7 links in common were considered to be a single company. This was a complicated task in terms of computational issues because of the size of the data. Google does not like us using their resources, so we had to create a big number of virtual machines, query Google for the URLs from each machine and then gather all the results in a database. The result of this process  was good enough for the World Bank team because with this disambiguation now they have a better way of investigating companies.
