@@ -75,7 +75,16 @@ Also, the World Bank has around 16,000 different indicators the project could us
 
 The code to download WDI can be seen at the Appendix \ref{chap_code} in code \ref{code_wdi}. This code can easily replicate results. For the purpose of this work, the code in \ref{code_wdi} downloads data for the countries within the countries from the investigations data, those countries define the countries list for this work.
 
+As it can be seen from the figures \ref{fig_wdi_bribes} to \ref{fig_wdi_time_contract}, There are many differences among regions in the world. 
+For example, on figure \ref{fig_wdi_bribes} that countries such as Vietnam in East Asia \& Pacific, Grece, Portugal in Europe \& Central Asia, Iraq in the Middle East \& North Africa, Pakistan in South Asia and Democratic Republic of Congo, show high levels of percentage of Bribes to tax officials with levels higher than 40\%. On the other hand, countries such as Micronecia in East Asia \& Pacific, Slovenia, Sweden and Stonia in Europe \& Central Asia, Chile, Mexico, Colombia and Uruguay in Latin America \& Caribian, Israel and Tunisia in the Middle East \& North Africa, Nepal and Sri Lanka in South Asia and South Africa and Rwuanda in Sub-Saharan Africa show low levels of percentage of Bribes to tax officials with numbers lower than 10\%.
+Figure \ref{fig_wdi_firms} shows the percentage of firms competing against informal firms. This indicator shows significant differences in each region. In the East Asia, Toga has the highest percentage near to 80\% against Philippines and Lao PDR with just about 25\%. In Europe and Central Asia, Kosovo has around 70\% against Slovenia and Uzbekistan with 25\%. In Latin America and the Caribbean, Bolivia, Uruguay and Mexico reach as far as 75\% against Panama with levels near to 25\%. In the Middle East and North Africa, Argelia has about 70\% and Jordan and Israel just about 20\%. In South Asia, Nepal and India have the highest levels with 50\%, where Bhutan and Pakistan have around 25\%. The highest levels are in Sub Saharan Africa where countries such as Sudan, Chad, Cameroon and Niger reach up to 80\% against Erittrea with levels higher than 25\%.
+Now, figure \ref{fig_wdi_pays} shows the percentage of Payments to public officials where clearly, one more time, countries in Sub Saharan Africa have the highest levels like Guinea, Democratic republic of Congo, Republic of Congo and Cameroon reach up to 80\%.Countries like Syrian Arab Republic and Argelia in the Middle East, Kyrgyz Republic and Ukraine in Europe and Central Asia, Cambodia and Vietnam in East Asia, Paraguay in Latin America and Bangladesh in South Asia present also high levels near to 65\% in contrast with countries such as Sudan and Cabo Verde in Sub Saharan Africa, Israel and Tunisia in the Middle East and North Africa, Spain, Ireland and Montegro in Europe and Central Asia, Fiji, China and Tonga in East Asia and the Pacific, Mexico, Uruguay and Colombia in Latin America and Caribbean, India and Nepal in South Asia, present very low levels near to 20\%.
+Finally, figure \ref{fig_wdi_time_contract} shows the mean time to enforce contracts in each country in hours. Differences are very radical. 
+ In  East Asia, Timor-Leste has the highest number near to 1500 hours (63 days) against Singapore and New Zeland with just about 200 hours (9 days). In Europe and Central Asia, Slovenia and Italy it takes about 1300 (55 days) against Russian Federation, Finland and Luxemburg where it takes about 180 (8 days). In Latin America and the Caribbean, Suriname, Guatemala and Colombia have the longer time with about 1400 hours (58 days) against Mexico and Antigua \& Barbuda near to 350 (14 day). In the Middle East and North Africa,  in Djibouti and Egypt Arab Republic it takes near to 1200 hours (50 days) where in Malta, Moroco and Iraq just takes about 500 hours (20 days). As a reference, in USA and Canada it takes about 500 hours (20 days). In South Asia in countries such as Afghanistan and Banghladesh it takes about 1500 hours (63 days) and in Bhutan just about 250 (10 days). In the Sub Saharan Africa, the record of highest time goes to Guinea - Bissau with times up to 1700 hours (70 days) and the lower to South Sudan with just about 250 hours (10 days).
 
+ Appendix \ref{chap_countries} show the figures of all the other indicators used in this project obtained with the package WDI\parencite{wb_r} and the code from appendix \ref{chap_code}.
+
+ These indicators were chosen because each one of them suggest that variances within them show an impact on how many contracts present substantiated cases of corruption, collusion, coercion and fraud among the contracts that the World Bank have given to development projects in those countries. As chapter \ref{chap_procurements} says and figures \ref{fig_cum_value} to \ref{fig_proposals}  suggest, differences in the indicators among countries and regions might be clues to identify malicious contracts. 
 
 \begin{figure}[H]
 \begin{center}
@@ -115,7 +124,63 @@ The code to download WDI can be seen at the Appendix \ref{chap_code} in code \re
 \end{figure}
 
 
-\subsection{Major and Historic Awards}
+\subsection{Major \& Historic Awards}
+
+As it was explained previously, the other main public dataset was the Major and Historic contracts awards from the World Bank. The data include the variables shown in table \ref{tab_major_dict}. The variables shown refers to the names after an extensive cleaning process that involved merging data form all the Development Banks' sites and from the Historical Awards data obtained from the Wold Bank. Such variables include Procurement category that refers to whether if the procurement was  of  Consultant Services, Non-Consultant Services, Goods or Civil Works. The type of agreement refers to  International Bank for Reconstruction and Development (IBRD),  
+Recipient-Executed Trust Funds (RETF), International Development Association (IDA), Institutional Development Fund (IDF), Global Environment Facility (GEF), State and Peace-Building Fund (SPF), California Air Resource Board (CARB) or Debt Reduction Facility (DRF) The Bid type can be Quality And Cost-Based Selection, Single Source Selection, Selection Based On Consultant's Qualification, Individual, National Competitive Bidding, International Competitive Bidding, CQS, SHOP, Direct Contracting, Quality Based Selection, Least Cost Selection, Selection Under a Fixed Budget, National Shopping, International Shopping or Limited International Bidding
+
+The historical and mayor awards data has information of contracts awarded between 1986 to 2014. As it can be seen on figure \ref{fig_major_number} the historical awards correspond to years from 1986 to 1994 and the major awards are the ones from 1995 to June, 2014. Figure \ref{fig_major_number} shows that  the number of contracts have been reduced in the recent years in every region of the world and there was an abnormal amount of contracts awarded in the Latin America and Caribbean region between 1996 and 1999.  Figure \ref{fig_major_awarded_usd}  shows the total awarded amount of the Historical and Major contracts by each specific region. This figure shows that although the number of contracts was very high in the Latin America and Caribbean region in 1996 to 1999, the total awarded money to that region in US dollars was not as high as the number of contracts. 
+
+\input{../tables/major_historic_dictionary_edited.tex}
+
+\begin{figure}[H]
+\begin{center}
+\caption{Number of Historic \& Major awards per Region}
+\label{fig_major_number}
+\includegraphics[max width=.95\textwidth]{../img/major_historic_region.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}\\
+\noindent \footnotesize{\textbf{Note:} OTH refers to projects that cannot be assigned to a specific country. Data to June, 2014.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\caption{Total awarded amount of Historic \& Major contracts per Region}
+\label{fig_major_awarded_usd}
+\includegraphics[max width=.95\textwidth]{../img/major_historic_region_awarded_usd.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}\\
+\noindent \footnotesize{\textbf{Note:} OTH refers to projects that cannot be assigned to a specific country. Data to June, 2014.}
+\end{figure}
+
+
+Figure \ref{fig_major_awarded_usd} also shows that just for 2013, the total awarded amount adds up to around 13,200 billion US dollars\footnote{1 billion = 1,000,000,000.} and that the awarded amount has increased more in Africa and in Europe from 2009 to 2013. 
+It's important to notice that the data goes up to June, 2014 so the fall in the last point in figures  \ref{fig_major_number} and \ref{fig_major_awarded_usd} of each series for each region is not necessarily going down, it is probably better to ignore that data.
+
+Now, figure \ref{fig_major_num_awarded_top} in the next page shows the top six countries  in terms of awarded contracts. It is interesting how tendencies show the World Bank's priorities among time. For example, it is clear that the top countries from 2008 to 2015 has been Vietnam in first place, Afghanistan in second, and China and some Latin American countries in the next places. From 1998 to 2006, the tendencies were different, China and India take the first and second places with around 1,500 contracts per year for that period. In the next places, countries such as Brazil, Bosnia Herzegovina,  Argentina and the Russian Federation. Finally, in the term from 1990 to 1997, Mexico, Argentina and India take the first places followed by countries such as China, Bolivia, Ecuador, and other Latin American countries.
+
+\begin{figure}[H]
+\begin{center}
+\caption{Top six countries: number of awarded contracts}
+\label{fig_major_num_awarded_top}
+\includegraphics[max width=.95\textwidth]{../img/major_historic_top_contracts_awarded.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\begin{center}
+\caption{Top six countries: total awarded amount (\$USD)}
+\label{fig_major_awarded_usd_top}
+\includegraphics[max width=.95\textwidth]{../img/major_historic_top_usd_awarded.pdf}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}
+\end{figure}
+
+
+
 
 
 
