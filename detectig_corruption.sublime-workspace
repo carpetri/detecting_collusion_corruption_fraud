@@ -3,17 +3,118 @@
 	{
 		"selected_items":
 		[
+			[
+				"countr",
+				"country_names_map"
+			],
+			[
+				"ta",
+				"table	Table"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
+			"settings":
+			{
+				"buffer_size": 10950,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
+			"settings":
+			{
+				"buffer_size": 31347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
+			"settings":
+			{
+				"buffer_size": 1556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/vis.tex",
+			"settings":
+			{
+				"buffer_size": 1415,
+				"line_ending": "Unix",
+				"name": "\\chapter{Visualization app. & model}\\label{chap_vi"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/X1_software.tex",
+			"settings":
+			{
+				"buffer_size": 4329,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/biblio.bib",
+			"settings":
+			{
+				"buffer_size": 17587,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 107.0,
 		"selected_items":
 		[
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git p",
+				"Git: Push"
+			],
 			[
 				"in",
 				"Package Control: Install Package"
@@ -76,23 +177,36 @@
 	},
 	"file_history":
 	[
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B3_data.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/major_historic_dictionary_edited.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/major_historic_dictionary.txt",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X3_countries.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/wdi.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A3_abstract.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A3_resumen.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/detectig_corruption.sublime-project",
+		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Carlos/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/C2234FF4-B0CD-413D-9C5D-4BD694657434/MAS140127G5A_NOM_NOMINA361_17.XML",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A1_cover.tex",
+		"/Users/Carlos/Desktop/get-pip.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/wb_countries.txt",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/data_clean/prueba.csv",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/prepare_country_sector_specific_features.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
+		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/A0_thesis_detecting_collusion_corruption_fraud.aux",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/tesis.sublime-project",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/detecting_corruption.sublime-workspace",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/detecting_corruption.sublime-project",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A2_web.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B3_data.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/Exploring_Investigations.py",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X1_software.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A3_abstract.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X1_procurement_plan.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A1_cover.tex",
-		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/biblio.bib",
-		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/Carlos/Dropbox/Aplicacion ICME/Abstract_EN.tex",
 		"/Users/Carlos/Dropbox/Aplicacion ICME/CV_CPetricioli_EN_1601.tex",
 		"/Users/Carlos/Dropbox/Aplicacion ICME/CPA_SoP_Stanford.tex",
@@ -102,7 +216,6 @@
 		"/Users/Carlos/Desktop/johntheripper/sha1.txt",
 		"/Users/Carlos/Desktop/john-1.7.3.1-macosx-universal/README.macosx",
 		"/Applications/VLC.app/Contents/MacOS/share/lua/extensions/vlsub.lua",
-		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings"
 	],
 	"find":
@@ -121,6 +234,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"spel",
+			"\\texttt{ ",
+			"&",
+			"(",
+			"additionalDirtyNames",
+			"mapOfCountryNames",
+			"dfProc",
+			"&",
+			"2013",
+			"nú",
 			"\"bibname\":",
 			"biblio",
 			"integ",
@@ -147,14 +270,175 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
+					"settings":
+					{
+						"buffer_size": 10950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
+					"settings":
+					{
+						"buffer_size": 31347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31287,
+								31287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13537.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
+					"settings":
+					{
+						"buffer_size": 1556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "latex_detecting_corruption_collusion_fraud/vis.tex",
+					"settings":
+					{
+						"buffer_size": 1415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"auto_name": "\\chapter{Visualization app. & model}\\label{chap_vi",
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "latex_detecting_corruption_collusion_fraud/X1_software.tex",
+					"settings":
+					{
+						"buffer_size": 4329,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "latex_detecting_corruption_collusion_fraud/biblio.bib",
+					"settings":
+					{
+						"buffer_size": 17587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 43.0
 	},
 	"input":
 	{
@@ -187,6 +471,10 @@
 	{
 		"height": 277.0
 	},
+	"output.git":
+	{
+		"height": 172.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -197,6 +485,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"",
+				"latex_detecting_corruption_collusion_fraud/B2_procurements.tex"
+			],
+			[
+				"data",
+				"latex_detecting_corruption_collusion_fraud/B3_data.tex"
+			]
 		],
 		"width": 0.0
 	},
@@ -212,6 +508,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 552.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true
 }

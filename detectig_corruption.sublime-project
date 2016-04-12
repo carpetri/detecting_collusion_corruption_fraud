@@ -23,6 +23,6 @@
 	],
 	"settings":
 			{
-				"TEXroot": "A0_thesis_detecting_collusion_corruption_fraud.tex"
+				"TEXroot": "latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex"
 			}
 }
