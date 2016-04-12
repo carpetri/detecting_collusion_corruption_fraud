@@ -1,0 +1,55 @@
+% !TEX root = ../latexA0_thesis_detecting_collusion_corruption_fraud.tex
+\begin{table}[H]
+\begin{center}
+\caption{Major and Historic Awards Dictionary} 
+\label{tab_major_dict}
+\scalebox{.7}{
+\begin{tabular}{ll}
+  \hline
+Variable & Values \\ 
+  \hline
+agreement\_type & Agreement type \\ 
+  award\_amount\_usd & Numeric \\ 
+  award\_currency & USD \\ 
+  award\_date & Date \\ 
+  bider\_country\_2nd & Country \\ 
+  bider\_country\_3rd & Country \\ 
+  bider\_country\_4th & Country \\ 
+  bid\_type & Type of Bid \\ 
+  buyer & Name of the contractor \\ 
+  buyer\_country & Country \\ 
+  buyer\_country\_id & Country ID \\ 
+  buyer\_reference & Identifier for the project \\ 
+  competitive & Logical \\ 
+  contract\_description & Description of the project \\ 
+  domestic\_pref\_affect & Logical \\ 
+  domestic\_pref\_allowed & Logical \\ 
+  fiscal\_year & Date \\ 
+  ln\_cr\_id & Loan ID \\ 
+  major\_sector & Sector \\ 
+  number\_of\_bids & Numeric \\ 
+  number\_of\_firms & Numeric \\ 
+  number\_of\_suppliers\_awarded & Numeric \\ 
+  price\_escalating\_flag & Logical \\ 
+  procurement\_category & Procurement Category \\ 
+  product\_line\_original & Logical \\ 
+  project\_id & Project ID \\ 
+  project\_name & Project Name \\ 
+  region & ECA, AFR, SAR, LCR, MNA, EAP, OTH \\ 
+  sent\_date & Sent date \\ 
+  signing\_date & Sign date \\ 
+  supplier & Supplier name \\ 
+  supplier\_country & Suplier Country \\ 
+  supplier\_country\_id & Suplier Country ID \\ 
+  unique\_id & Unique ID \\ 
+  wb\_contract\_number & Contract Number \\ 
+  historical & Logical \\ 
+  country & Country \\ 
+  year & Year \\ 
+   \hline
+   \footnotesize{\textbf{Source:} Own creation.} &
+
+\end{tabular}}
+\end{center}
+
+\end{table}
