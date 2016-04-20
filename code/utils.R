@@ -1,3 +1,4 @@
+options(xtable.comment = FALSE)
 carga_paquetes <- function() {
   dependencies = c("plyr",
                    "dplyr",
@@ -316,3 +317,61 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
     }
   }
 }
+
+
+
+genera_tabla_larga <- function(datos,
+                               titulo_tabla,
+                               label_tabla,
+                               archivo_salida='tabla.tex', 
+                               digits_tabla=0){
+  
+  align_tabla <- paste0(rep('X',ncol(datos)+1),collapse = '')
+  
+  tabla <- xtable( datos  , 
+                   caption = titulo_tabla,
+                   label = label_tabla, 
+                   align = align_tabla , 
+                   digits = 0)
+  if(nrow(datos)>20){
+    #Para cuando hay tablas muy largas
+    add.to.row <- list(pos = list(0), command = NULL)
+    
+    command <- paste0("\\hline\n\\endhead\n",
+                      "\\hline\n\\multicolumn{", dim(datos)[2],"}{l}", "{\\tiny Continues on next page}", "\\endfoot\n",
+                      "\\multicolumn{", dim(datos)[2],"}{l}","{\\tiny End of table}",
+                      "\\endlastfoot\n")
+    add.to.row$command <- command
+    
+    x <- print( tabla, 
+                print.results = getOption("xtable.print.results", F),
+                floating=F,
+                include.rownames = F, 
+                include.colnames = T,
+                latex.environments = getOption("xtable.latex.environments", c("center")),
+                tabular.environment = "longtable",
+                caption.placement = 'top',
+                add.to.row = add.to.row
+                # hline.after = c(-1) 
+    )  
+    cat(paste0('% !TEX root = ../latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex\n\\begin{filecontents}{longtab.tex}\n\\scriptsize\n',x , '\n\\end{filecontents}\n\\LTXtable{1.0\\linewidth}{longtab.tex}'), 
+        file =archivo_salida )
+    cat(paste0('Se generó el archivo de salida: \"',archivo_salida,
+               '\".\nSe requieren los paquetes:\n\\usepackage{longtable}\n\\usepackage{tabularx}\n\\usepackage{filecontents,ltxtable}\n\nEn latex sólo pones \\input{',archivo_salida,'}'))
+  }else{
+    x <- print( tabla, 
+                print.results = getOption("xtable.print.results", F),
+                floating=F,
+                include.rownames = F, 
+                include.colnames = T,
+                latex.environments = getOption("xtable.latex.environments", c("center")),
+                tabular.environment = "tabularx",
+                caption.placement = 'top',
+                hline.after = c(-1,0)
+    )
+    cat(paste0('% !TEX root = ../latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex\n',x), file = archivo_salida)
+    cat(paste0('Se generó el archivo de salida: \"',archivo_salida,
+               '\".\nSe requieren los paquetes:\n\\usepackage{longtable}\n\\usepackage{tabularx}\n\\usepackage{filecontents,ltxtable}\n\nEn latex sólo pones \\input{',archivo_salida,'}'))
+  }
+}
+
