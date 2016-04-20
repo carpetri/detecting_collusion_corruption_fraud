@@ -146,7 +146,6 @@ top_usd %>%
   theme_hc(base_family = 'Adobe Garamond', base_size =13)
 ggsave(filename = '../img/major_historic_top_usd_awarded.pdf',width = 8,height = 8)
 
-
 wb %>% filter(competitive==0) %>% select(bid_type) %>% unique
 
 wb %>% filter(competitive==1) %>% select(bid_type) %>% unique
@@ -156,5 +155,5 @@ all_entities <- read.csv('../data_clean/all_entities.csv')
 head(all_entities)
 
 uni_len <- function(x){ length(unique(x)) }
-all_entities %>% summarise_each(funs(uni_len))
 
+all_entities %>% summarise_each(funs(uni_len))
