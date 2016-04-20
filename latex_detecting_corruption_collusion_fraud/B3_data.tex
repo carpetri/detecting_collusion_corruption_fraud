@@ -3,38 +3,27 @@
 As shown on chapter \ref{chap_intro}, collecting the necessary data for any Data Science project is almost always a huge task because the reality tends to be that some of the most relevant variables commonly go unmeasured or are private. This project uses  two types of data, private and public. This chapter describes the two main types of data used for this project.
 Section \ref{sec_inv_data} describes the characteristics of private data and the scope it has. It also explains about the confidentiality agreement Integrity Vice Presidency (INT) offered this project in exchange for investigations data. Section \ref{sec_public_data} explains how to download public data from the Wold Bank's servers using coding tools.
 
-\section{Investigations data}\label{sec_inv_data}
+\section{Private data}
+\subsection{Investigations} \label{sec_inv_data}
 
 The most valuable data for this project was the private data which the partners at INT made available for the project while maintaining a spirit of openness. A confidentiality agreement was signed in order to give access to the investigations database. The only condition was that all the data and analyses had to be stored and processed on a remote server with an encryption and security measurements that satisfied the World Bank's standards. 
 
 In this case the server was an Amazon Web Service's (AWS), Amazon Elastic Compute Cloud (Amazon EC2) machine. EC2 is a web service that provides resizable compute capacity in the cloud. It is designed to make web scale cloud computing easier for developers\footnote{``Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change. Amazon EC2 changes the economics of computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools to build failure resilient applications and isolate themselves from common failure scenarios.'' \parencite{aws_es2}}. For more details on how to setup an AWS computer see \parencite{aws_start} and appendix \ref{chap_software}. In other words, the data was stored in an AWS machine on the cloud that had an encrypted folder with the specific files. Since all the data had to stay on the cloud, all the processing had to be done on the cloud too. For this purpose, a server running \texttt{Python} and \texttt{R} was hosted at an AWS computer. 
 
 
-\subsection{Basic description}
+\subsubsection{Description}
 
-The investigations data consists of nearly 13,000 cases, of which over half are Fraud and Corruption. 377 are labeled as Collusion. These are from the ``Allegation Category'' column, Notably, allegation categories include Fraud, Corruption, and Fraud \& Corruption. It is possible for a case's description to just say Fraud and for its allegation category to still be Fraud and Corruption. I would suggest treating each of these 3 categories as the same (i.e. all ``Fraud and Corruption'').
-
-Allegations also include a ``Allegation Sub-Category''. Collusion is sometimes listed as a sub-category, for example: Allegation Category: Fraud and Corruption or Allegation Sub-Category: Bid Manipulation/Collusion.
-
-The Unit of analysis is the investigations data is the ``Subject'' column. Mostly this variable refers to companies and people, but on occasion other entities on a project may be subjects of investigation, for example the coordinating agency. For example Case \# C-EGT-2010-1754, the subject is: Egyptian Ministry of Education. In procurement data it shows up in ``Implementing Agency'' column as: \texttt{PPMU-MINISTRY OF EDUCATION}
+The investigations data consists of nearly 13,000 cases, of which over half are Fraud and Corruption. 377 are labeled as Collusion. These are from the ``Allegation Category'' column, Notably, allegation categories include Fraud, Corruption, and Fraud \& Corruption. It is possible for a case's description to just say Fraud and for its allegation category to still be Fraud and Corruption. For the purpose of this project, each of these 3 categories were considered as the same (i.e. all ``Fraud and Corruption''). Allegations also include a ``Allegation Sub-Category''. Collusion is sometimes listed as a sub-category, for example: Allegation Category: Fraud and Corruption or Allegation Sub-Category: Bid Manipulation/Collusion. The Unit of analysis is the investigations data is the ``Subject'' which refers to the entity that was investigated. Mostly this variable refers to companies and people, but on occasion other entities on a project may be subjects of investigation, for example the coordinating agency. For example Case \# A-AAA-1234-5678, the subject is: Country's X Ministry of Education. In procurement data it shows up in ``Implementing Agency'' differently.
     
-The Labels in the investigations are very different and specific to each investigation case. The most relevant label will be the Allegation Outcome's column. The most frequent outcomes for a case are ``Substantiated'', which means that the Subject was found to be guilty of the Allegation, ``Unfounded'', which means that the Subject was found to be  innocent of the allegation, and ``Unsubstantiated'', which means that the investigation did not have the necessary means to conclude that the subject was  guilty, but neither does it have to conclude that the subject is innocent. Substantiated and Unsubstantiated occur in roughly equal quantities, while Unfounded is fairly rare. There are other, rarer labels, like ``We kicked it to another organization''.
+The Labels in the investigations are very different and specific to each investigation case. The most relevant label will be the Allegation Outcome's column. The most frequent outcomes for a case are ``Substantiated'', which means that the Subject was found to be guilty of the Allegation, ``Unfounded'', which means that the Subject was found to be  innocent of the allegation, and ``Unsubstantiated'', which means that the investigation did not have the necessary means to conclude that the subject was  guilty, but neither does it have to conclude that the subject is innocent. Substantiated and Unsubstantiated occur in roughly equal quantities, while Unfounded is fairly rare. There are other labels like ``We kicked it to another organization''.
 
 The identities of the cases within the investigations data include that about 80\% of the data has either the name of the accused (the majority) or the project number (about a third). These are in the Subject and Project Number columns, respectively. That means about 20\% of the data appears to be ``lost'', in that we can't match it up to any procurement data. There is potentially other information in the ``Title'' field, but it is unstructured. There could theoretically be information in other fields, but they are not as rich.
 
 There are among 1000 different sectors but most of them are mixed sectors and have not been previously cleaned. For example, when an investigation involves cases that cover sectors such as transportation and urban development there can be the case that you find a Transportation sector, a Urban Development sector and a Transportation \& Urban Development Sector. For the specifics of the model, this project works with sector specific as they are, this meaning that, for the project, the three cases mentioned before are considered to be different sectors. By doing so, there are about 205 sectors.
 
-% Questions [for Betsy?]
-% ==
-% - What's the difference between 'Allegation Outcome' and 'Outcome of Overall Investigation When Closed', because these often give different outcomes (Substantiated, Unsubstantiated) (Outcomes different: 10422, Outcomes same: 2301)
-% - In sector names, what's the difference between "Transportation" and "SDN - Transport"
-%  - Ditto "Energy/Mining" and "SDN - Energy/Mining"
-
-
-
-
 
 \section{Public data}\label{sec_public_data}
+
 
 
 Fortunately for the project, not all the data was private. This work uses the Open Data\footnote{Go to \cite{wb_data}.}  and the Data Bank websites from the World Bank, which offer free access to comprehensive, downloadable indicators about development in countries around the globe. 
@@ -157,7 +146,11 @@ The historical and mayor awards data has information of contracts awarded betwee
 Figure \ref{fig_major_awarded_usd} also shows that just for 2013, the total awarded amount adds up to around 13,200 billion US dollars\footnote{1 billion = 1,000,000,000.} and that the awarded amount has increased more in Africa and in Europe from 2009 to 2013. 
 It's important to notice that the data goes up to June, 2014 so the fall in the last point in figures  \ref{fig_major_number} and \ref{fig_major_awarded_usd} of each series for each region is not necessarily going down, it is probably better to ignore that data.
 
-Now, figure \ref{fig_major_num_awarded_top} in the next page shows the top six countries  in terms of awarded contracts. It is interesting how tendencies show the World Bank's priorities among time. For example, it is clear that the top countries from 2008 to 2015 has been Vietnam in first place, Afghanistan in second, and China and some Latin American countries in the next places. From 1998 to 2006, the tendencies were different, China and India take the first and second places with around 1,500 contracts per year for that period. In the next places, countries such as Brazil, Bosnia Herzegovina,  Argentina and the Russian Federation. Finally, in the term from 1990 to 1997, Mexico, Argentina and India take the first places followed by countries such as China, Bolivia, Ecuador, and other Latin American countries.
+Now, figure \ref{fig_major_num_awarded_top} in  page \pageref{fig_major_num_awarded_top} shows the top six countries  in terms of awarded contracts. It is interesting how tendencies show the World Bank's priorities among time. For example, it is clear that the top countries from 2008 to 2015 has been Vietnam in first place, Afghanistan in second, and China and some Latin American countries in the next places. From 1998 to 2006, the tendencies were different, China and India take the first and second places with around 1,500 contracts per year for that period. In the next places, countries such as Brazil, Bosnia Herzegovina,  Argentina and the Russian Federation. Finally, in the term from 1990 to 1997, Mexico, Argentina and India take the first places followed by countries such as China, Bolivia, Ecuador, and other Latin American countries.
+
+Next, figure \ref{fig_major_awarded_usd_top} in page \pageref{fig_major_awarded_usd_top} shows the top six countries  in terms of total awarded amount for each year in US dollars. From the figure, it is easy to see that China has been the country that has received the higher amount of money in contracts followed by India in second place and Brazil in third. This tend seems to be a constant in the top three countries since 1988 up to 2014. Other countries in the next three places include the Russian Federation, Vietnam, Africa and Africa.
+
+The visualizations of  the data from figures such as \ref{fig_major_number} to  \ref{fig_major_awarded_usd_top} could help the World Bank to prioritize how to administer the number of contracts to award and the total awarded amount among different regions in the world and among different time period such that there's a balanced assignation of resources because figures  \ref{fig_major_number} to  \ref{fig_major_awarded_usd_top} suggest that the World Bank is not taking that into their assignation policy. This fact might or might not be related to how corruption, collusion and fraud but it certainly helps them as a political strategy.
 
 \begin{figure}[H]
 \begin{center}
@@ -174,14 +167,57 @@ Now, figure \ref{fig_major_num_awarded_top} in the next page shows the top six c
 \begin{center}
 \caption{Top six countries: total awarded amount (\$USD)}
 \label{fig_major_awarded_usd_top}
-\includegraphics[max width=.95\textwidth]{../img/major_historic_top_usd_awarded.pdf}
+\includegraphics[max width=1\textwidth]{../img/major_historic_top_usd_awarded.pdf}
 \end{center}
 \noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}
 \end{figure}
 
+\newpage
+
+
+\section{Entity names disambiguation}
+
+As it was explained on chapter \ref{chap_procurements}, historically, the World Bank has made investigations based, mainly, on information and data provided third parties claiming that something is suspicions within a procurement process. Fortunately, the Wold Bank has been keeping record of the investigation process by generating the investigations data. The problem is that the information on the investigations data can not be easily linked to the Major and Historical awards since the suppliers, the bidders and the contractors' names were introduced in many different formats by many different organizations among the World Bank as described in chapter \ref{chap_intro}. This is a current limitation for the World Bank and a big problem regarding this project. This section explains one way to approach this problem.
+
+The idea is very simple. Technology in modern search engines such as Google provides a reliable way to search for each one of the names registered in the data form the Investigations and the Major \& Historical awards data. So the plan was to \textit{google} each one of the unique names among the different data sources and compare the results so that entities that have similar results correspond to the same entity. This is a major data problem because it escalates very fast. After \textit{googleing} each one of the entities, results must be compared with all the remaining results in order to determine whether they are considered similar or not.  This means that if $n$ searches are made, then $n^2$ comparatives has to be computed. 
+
+The first step then became very clear, removing words such that the problem could be simplified. This was referred as stop words removal. The idea behind removing the stop words is to simplify the work so that companies or entity names that are supposed to refer to the same organization or person but have different names among the data sources such as Price Waterhouse Coopers incorporated and Price Waterhouse Coopers INC actually do. By doing so, the entity names was reduced in about 15\% passing from 234,067 entity names originally to 198,957 unique values after removing punctuation and stop words, which is a very considerable amount taking into account that the idea is to search every one of them in Google.
+
+The first problem then becomes that unique names from contractors, buyers and bidders ascend up to 198,957 unique names in the different data sources after cleaning for stop words and removing punctuation\footnote{The stop words were selected based on insight form the Integrity Vice Presidency. The stop words used were: \textit{`jsc', `corp', `m/s', `inc', `incorporated', `doo', `d.o.o.', `la', `el', `srl', `s.r.l.', `limited', `llc', `l.l.c.', `co', `corporation', `company', `ltd', `ltda', `lda', `de', `i/e', `ooo', `limited', `societe', `société', `et', `le', `and', `the', `of', `de', `des', `du', `sa', `s.a.', `pty', `ste', `sarl', `s.a.r.l.', `gmhb', `g.m.h.b.', `sprl', `s.p.r.l.'.} }. This has two main limitations, the first that, Google, does not allows users to perform computed searches that ascend to a number as big as what we are dealing here. The second, even if we were able to perform those searches, the number of binary comparatives to be made after the searches will be a number near to 39,204,000,000 which, if each binary computation lasted a 10\% of a second, it would take about 124 years to complete all of them sequentially, and,  of course, that is not useful at all.
+
+Of course, the plan was not to perform sequential operations to make all the comparatives because, even if we had a 124 machines cluster to compute that in parallel, which is expensive enough, that process would still take about a year to end.
+
+So the algorithm to approach this problem was the following: first, divide all the canonical names into several chunks and start an AWS machine, each with different I.P. address so that we don't face the restriction of making too much automated searches at Google; second, perform the searches for each one of the entity names and store the first 10 results given by google; third, after having the results within each chunk, compute the binary comparisons in that chunk to see how many searches in common entities have and if any two entities have the desired number of search results in common, group them as one company and then tag just one of them so that in the next step, fourth, the final step, just make the binary comparatives with the entities that had no matches and the ones tagged so that the process reduces the number of comparisons to be made. The code to perform this process is displayed in the  appendix \ref{chap_code} code \ref{code_seaches} and \ref{code_cluster_names}
+
+Results were great because this algorithm completed in less than four days using about 450 instances. That means that a process that would normally take at least 100 days (by using 450 instances) was reduces in about 95\% the time making it very efficient. This was a great result because it created very useful results in a decent time for the project. Next subsection covers how to decide the parameters used for this process.
+
+\subsection{Entity names disambiguation parameters \& results}
+
+The results of the algorithm described in the last section and displayed in  the  appendix \ref{chap_code} code \ref{code_seaches} and \ref{code_cluster_names} depend on what is it considered to be a common entity name in terms of results in the Google searches. In other words, it depends on how many results of the Google searches in common are needed in order to consider two entities to be the same one.
+
+Approaching this represent a trade-off between lowering the error in the number of unique entity names (false negatives) against being sure that two entities are actually the same in reality (false positives). For this project it was more relevant to reduce the false positives to be sure that whenever two entities have the same canonical name it's actually the case.
+
+In order to decide how many searches in common were needed, we performed several experiments and talked with the partners at the Integrity Vice Presidency from the World Bank. They agreed that we needed a conservative approach to this problem. We tried using  nine, seven, five and three result searches in common within a random sample so that we could compare results in a viable time frame. Results using nine and seven searches in common seemed to bee too conservative. While, results using three results seemed desirable because it reduced the entity names in about 14\%, it seemed too relaxed for our partner at the World Bank so we decided to stay with five searches in common.  The total number of unique names was reduced in about 10\% which left us with great data for the next steps of the model.
+
+The output of this algorithm was the first result of the project and this alone represented a first way to better understand procurement data among the different databases of the World Bank. Partners at the Integrity Vice Presidency were surprised that the project came up with a useful method to reconcile data that the investigators at the World Bank can actually use. The project itself could be just about a writing the best algorithm to reconcile entities among different databases that's why the investigators from the World Bank were thanked enough just for this results. It is very important to say that the output of this process is and will be used just as an additional tool that helps them  conduct their investigation process and in no way they are considering that the results of this process are absolute in any form.
+
+Just to state a very clear example of how this algorithm worked, table	\ref{tab_disambiguation} shows all the suppliers that were matched to the entity Price Waterhouse Coopers.
+
+\input{../tables/ex_disambiguation.tex}
+
+\section{Feature creation}
 
 
 
 
 
-\section{Disambiguation}
+
+
+
+
+
+
+
+
+
+
