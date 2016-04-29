@@ -204,20 +204,55 @@ The output of this algorithm was the first result of the project and this alone 
 Just to state a very clear example of how this algorithm worked, table	\ref{tab_disambiguation} shows all the suppliers that were matched to the entity Price Waterhouse Coopers.
 
 \input{../tables/ex_disambiguation.tex}
-
-\section{Feature creation}
-
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}
 
 
+\section{Co-Award Network and feature creation} \label{sec_features}
 
 
+After waiting for this algorithm to end, we finally were ready to build tools for a proactive investigation within the World Bank. To evaluate contract risk, we generated features and models tracking companies' historical involvement on World Bank projects within specific countries and sectors. As well we created co-award network features for each company.  Those features would be used later in the model and estimations. Features facilitate the identification of patterns that could be related to potential corruption, collusion, coercion and fraud.
+
+There are two types of features, country specific features and the co-award network features. The country specific features include variables such as total contracts  asigned per country,  total awarded amount in USD per country, total contracts per year in each country, total awarded amount in USD in each year for each contract, total contracts per sector por each country, total awarded amount in USD per sector for each country, total contracts awarded per sector per year for each country and total award amount per sector, country and year.
+
+The second type of features involves the co-award network.  For example, down here at figure \ref{fig_network} you can see the co-award network for ACME INCORPORATED, a fictitious entity created to illustrate how does the co-award network works.  In dark blue there's every project that  the ACME INCORPORATED has been part of and in green there's every company that worked in that specific project. This is the private version of the network delivered to the Integrity Vice Presidency in the web application (for more details see \ref{chap_product}). This co-award network is a level one network that includes they have different colors whether a company was investigated and found to be guilty, white blue represents a company or an entity that have been previously debarred from receiving future projects from the World Bank. Light orange represents a company or an entity that have been investigated in the past and, finally, darker orange represents a company or an entity that have been investigated and debarred. As explained in chapter \ref{chap_procurements}, there can be many reasons for the World Bank to grant debarment for a company or an entity. The important thing to consider here is that the fact that an entity worked on a project where there's one or more entities that have been investigated, debarred or both, might be an indication of collusion, corruption or even fraud so the idea is to incorporate  those features to the data so that the model is able to identify those potential indicators if they actually exist.
 
 
+\begin{figure}[H]
+\begin{center}
+\caption{Co-award Network example}
+\label{fig_network}
+\includegraphics[max width=.8\textwidth]{../img/Network-colors.png}
+\includegraphics[max width=.19\textwidth]{../img/network-legend.jpg}
+\end{center}
+\noindent \footnotesize{\textbf{Source:} Own creation with data from the World Bank.}
+\end{figure}
+
+Table \ref{tab_coawards_dic} show all the features created from the co-award network, variables include for each Supplier and Project the Degree of centrality contemporary, which refers to the last year of data, and cumulative, to the average in the historical network
+
+\input{../tables/coawards_features.tex}
 
 
+The network features include variables for each project and for each supplier in the network. Figure \ref{fig_network} is just an example of a one degree network. The degree means that the network represents an entity, in this case Acme Incorporated, and all the projects that has been asigned among with all the other entities co-awarded to those same projects where Acme Incorporated was involved. In other words, one main entity and all the projects and entities involved in those project. Degree number two refers to a network of one main entity, all the projects where it was involved with a one degree network for each one of the entities involved on those projects. This means that the network grows exponentially as the degree grows.
 
+Also, there are at least two ways to create the  co-awards network, in terms of the contemporary projects or in terms of the cumulative projects awarded to each entities. Figure \ref{fig_network} shows the cumulative network for Acme Incorporated.
 
+Other network features include the distance to other entity, so that, the distance is zero for each entity and itself. The distance is one if two entities worked in the same project, i.e. if both of the companies belong to the same network of degree one and so on.
 
+\begin{definition}
+For every pair of  entities $x, y$ in the complete network $\mathbb{X}$, the distance in the co-awards network denoted by $d(\cdot,	\cdot)$ is such that
+\begin{itemize}
+\item $d(x,x)=0 \ \forall x \ \in  \mathbb{X} $
+\item $0<d(x,y)=d(x,y) \ \forall \ x, y , x\neq y \ \in  \mathbb{X},$
+\end{itemize}
+and it is such that 
+$$ d(x,y) = degree_{n}(x,y), $$
+where $degree_{n}(x,y) $ is the minimum degree of the network that contains both entities $x$ and $y$.
+Note that by definition, the distance in the network is a complete norm. 
+\end{definition} 
 
+Given the general definition of distance in the network, the table  \ref{tab_coawards_dic} contains variables relative to the distance between entities and  other entities that were previously investigated including the minimum and the  average distance for an entity to  any another that was investigated in the cumulative and the contemporary network.
 
+As stated in the description of the investigations data, a entity might have been investigated as well as a complete project. For this reason, table \ref{tab_coawards_dic} contains variables also relative to the distance between entities and  other projects that were previously investigated including the minimum and the  average distance for an entity to any another project that was investigated in the cumulative and the contemporary network.
 
+ 
+Finally, once we have the features, the next step is the modeling for the identification of possible cases of corruption, collusion and fraud in the data. Chapter \ref{chap_product} shows the details of the modeling process.
