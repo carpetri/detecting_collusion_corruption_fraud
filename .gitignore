@@ -20,4 +20,5 @@ latex_detecting_corruption_collusion_fraud/00_thesis_detecting_collusion_corrupt
 *.out
 *.run.xml
 *.synctex.gz
-*.toc
+*.toclongtab.tex
+A0_thesis_detecting_collusion_corruption_fraud.toc
