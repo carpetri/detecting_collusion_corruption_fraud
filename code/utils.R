@@ -49,7 +49,6 @@ imprime_modelos <- function(lista_mod,titulo, lab, archivo){
 }
 
 require(ggplot2)
-
 tema_mapas <- theme(axis.line=element_blank(),
                     axis.text.x=element_blank(),
                     axis.text.y=element_blank(),

@@ -5,7 +5,7 @@ library(ggthemes);library(extrafont); library(xtable)
 library(plotly)
 loadfonts()
 rm(list=ls()); gc();gc();gc();gc();
-
+source('utils.R')
 wb <- readRDS('../data_clean/wb.rds')
 
 str(wb)
@@ -157,3 +157,28 @@ head(all_entities)
 uni_len <- function(x){ length(unique(x)) }
 
 all_entities %>% summarise_each(funs(uni_len))
+
+########### Features
+
+
+features <- read.csv('../Data/Procurements/Historic_and_Major_awards_network_features.csv')
+x <- features[80:ncol(features)] %>% names %>% as.data.frame()
+x <- gsub(pattern = 'Size_[0-9]',replacement = 'Size_k',x = x$.) %>% uniquex
+genera_tabla_larga(data.frame(Features=x),titulo_tabla = 'Co-award network features',
+                   label_tabla = 'tab_coawards_dic',
+                   archivo_salida = '../tables/coawards_features.tex')
+
+dic_features <- sapply(wb[,49:ncol(wb)],simplify = F, function(df){
+  if(class(df)!='numeric' | class(df)!='logical'){
+    x <- df %>% unique() %>% head(15)
+    paste0(x, collapse = ', ') 
+  }else{
+    class(df)
+  }
+}) %>%  as.data.frame( stringsAsFactors = F) %>% 
+  gather(Variable,Values, business_disclosure_index:debarred)
+
+dic_features
+ 
+
+
