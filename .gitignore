@@ -22,3 +22,4 @@ latex_detecting_corruption_collusion_fraud/00_thesis_detecting_collusion_corrupt
 *.synctex.gz
 *.toclongtab.tex
 A0_thesis_detecting_collusion_corruption_fraud.toc
+longtab.tex
