@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"drop",
+				"dropna"
+			],
+			[
+				"netwo",
+				"network_global"
+			],
+			[
 				"countr",
 				"country_names_map"
 			],
@@ -16,50 +24,42 @@
 	"buffers":
 	[
 		{
-			"file": "latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
-			"settings":
-			{
-				"buffer_size": 10950,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
-			"settings":
-			{
-				"buffer_size": 31346,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
-			"settings":
-			{
-				"buffer_size": 1556,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "latex_detecting_corruption_collusion_fraud/biblio.bib",
 			"settings":
 			{
-				"buffer_size": 17587,
+				"buffer_size": 17853,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "latex_detecting_corruption_collusion_fraud/B3_data.tex",
+			"file": "latex_detecting_corruption_collusion_fraud/B4_product.tex",
 			"settings":
 			{
-				"buffer_size": 30603,
+				"buffer_size": 8522,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "latex_detecting_corruption_collusion_fraud/vis.tex",
+			"file": "/Users/Carlos/Desktop/Atalaya/proyectos/atalaya_noticias/datos_noticias_id/noticia-4355_2015-06-18_Asaltan negocio con sub ametralladora.txt",
 			"settings":
 			{
-				"buffer_size": 1984,
+				"buffer_size": 1742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "code/svm_latex.py",
+			"settings":
+			{
+				"buffer_size": 1688,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "latex_detecting_corruption_collusion_fraud/X4_code.tex",
+			"settings":
+			{
+				"buffer_size": 539,
 				"line_ending": "Unix"
 			}
 		}
@@ -176,11 +176,31 @@
 	},
 	"file_history":
 	[
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X3_countries.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/vis.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X1_software.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/classifying_intersection.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/classifying_investigations.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/evaluation_pipeline_for_classifiers.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/evaluation_pipeline_for_classifiers.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/evaluation_pipeline_for_classifiers-MISHAS_EXPERIMENTATION_COPY.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/Classification_pipeline.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/classifying_intersection.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/classifying_investigations.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X4_code.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B3_data.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/Classification_pipeline.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/vis.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/longtab.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/coawards_features.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/ex_disambiguation.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/Cluster_Search.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/Clustering_Search_Results.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/Cluster_Search_Individual.py",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A0_thesis_detecting_collusion_corruption_fraud.pdf",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X3_countries.tex",
+		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X1_software.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/major_historic_dictionary_edited.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/major_historic_dictionary.txt",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/wdi.py",
@@ -194,16 +214,13 @@
 		"/Users/Carlos/Desktop/get-pip.py",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/tables/wb_countries.txt",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/data_clean/prueba.csv",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/code/prepare_country_sector_specific_features.py",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
 		"/Users/Carlos/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/A0_thesis_detecting_collusion_corruption_fraud.aux",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/tesis.sublime-project",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/detecting_corruption.sublime-workspace",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/detecting_corruption.sublime-project",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/A2_web.tex",
-		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/src/Exploring_Investigations.py",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/X1_procurement_plan.tex",
 		"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud/latex_detecting_corruption_collusion_fraud/biblio.bib",
@@ -224,7 +241,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 105.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/Carlos/Dropbox/detecting_collusion_corruption_fraud"
@@ -235,6 +252,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"svm",
+			"logical_and",
+			"locigal_and",
+			"# <markdowncell>",
+			"# <codecell>",
+			"\\_",
+			"a/an company/entity",
+			"total of",
+			"total of aw",
+			"pd.re",
+			"# <codecell>",
+			"# <markdowncell>",
+			"# <codecell>",
+			"# <markdowncell>",
+			"# <codecell>",
 			"competitive",
 			"spel",
 			"\\texttt{ ",
@@ -272,48 +304,51 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "latex_detecting_corruption_collusion_fraud/B1_introduction.tex",
+					"file": "latex_detecting_corruption_collusion_fraud/biblio.bib",
 					"settings":
 					{
-						"buffer_size": 10950,
+						"buffer_size": 17853,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								64
+								9101,
+								9101
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9046.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "latex_detecting_corruption_collusion_fraud/B2_procurements.tex",
+					"file": "latex_detecting_corruption_collusion_fraud/B4_product.tex",
 					"settings":
 					{
-						"buffer_size": 31346,
+						"buffer_size": 8522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24404,
-								24404
+								6966,
+								6966
 							]
 						],
 						"settings":
@@ -321,44 +356,17 @@
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 9732.0,
+						"translation.y": 2516.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "latex_detecting_corruption_collusion_fraud/b4_theoretical.tex",
+					"file": "/Users/Carlos/Desktop/Atalaya/proyectos/atalaya_noticias/datos_noticias_id/noticia-4355_2015-06-18_Asaltan negocio con sub ametralladora.txt",
 					"settings":
 					{
-						"buffer_size": 1556,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "latex_detecting_corruption_collusion_fraud/biblio.bib",
-					"settings":
-					{
-						"buffer_size": 17587,
+						"buffer_size": 1742,
 						"regions":
 						{
 						},
@@ -371,9 +379,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -382,45 +388,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "latex_detecting_corruption_collusion_fraud/B3_data.tex",
+					"buffer": 3,
+					"file": "code/svm_latex.py",
 					"settings":
 					{
-						"buffer_size": 30603,
+						"buffer_size": 1688,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30598,
-								30598
+								1000,
+								946
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13359.0,
+						"translation.y": 444.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "latex_detecting_corruption_collusion_fraud/vis.tex",
+					"buffer": 4,
+					"file": "latex_detecting_corruption_collusion_fraud/X4_code.tex",
 					"settings":
 					{
-						"buffer_size": 1984,
+						"buffer_size": 539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								536,
-								536
+								505,
+								516
 							]
 						],
 						"settings":
@@ -508,6 +516,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
+	"side_bar_width": 365.0,
 	"status_bar_visible": true
 }
